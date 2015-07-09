@@ -1,40 +1,22 @@
-int w=0,e=0;
-int[]a = { 2,5,7,6,8,9,4,3};
-int temp;
+/* @pjs preload="11102210214cf8ce64e5e9becc.jpg"; */
+
+PImage img;
+
 void setup()
 {
-  size(500,500);
- 
+  size(420,300);
+  img = loadImage("11102210214cf8ce64e5e9becc.jpg");
+  background(255);
 }
+
 void draw()
 {
-  
-if(e<8)
- {
-    if(w>6)
- {
-   w=0;
-   e++;
-  
- }
-   if (a[w]>a[w+1])
- { 
-   temp=a[w];
-   a[w]=a[w+1];
-   a[w+1]=temp;
- 
-   
- 
-   
+  for(int i = 0; i != 5; i++){
+    int x = (int)random(0,480),
+      y = (int)random(0,300);
+    color c = img.get(4*x,4*y);
+    fill(c);
+    noStroke();
+    ellipse(x,y,3,3);
   }
-    w++;
-    background(0,0,0);
-    for (int k = 0; k <8 ; k++){
-     rect(0,20*k,10*a[k],20);
-    }
-
- 
 }
-}
-   
- 
