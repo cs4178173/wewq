@@ -17,6 +17,6 @@ void draw()
     color c = img.get(4*x,4*y);
     fill(c);
     noStroke();
-    ellipse(x,y,5,5);
+    ellipse(x,y,8,8);
   }
 }
